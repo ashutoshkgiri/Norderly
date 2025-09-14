@@ -1,6 +1,7 @@
-import axios from 'axios';
+import axios from 'axios'
+const url=https://norderly.onrender.com
 const API = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || 'http://localhost:4000/api'
+  baseURL: url || 'http://localhost:4000/api'
 });
 
 API.interceptors.request.use(config => {
