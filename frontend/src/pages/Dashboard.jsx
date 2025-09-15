@@ -7,6 +7,7 @@ export default function Dashboard() {
   const [totals, setTotals] = useState({ totalCustomers: 0, totalOrders: 0, revenue: 0 });
   const [series, setSeries] = useState([]);
   const [topCustomers, setTopCustomers] = useState([]);
+    const navigate = useNavigate();
 
   useEffect(() => {
     async function load() {
