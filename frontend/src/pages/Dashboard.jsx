@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import API from '../api';
 import OrdersChart from '../components/Charts/OrdersChart';
+import { useNavigate } from "react-router-dom";
 
 export default function Dashboard() {
   const [totals, setTotals] = useState({ totalCustomers: 0, totalOrders: 0, revenue: 0 });
@@ -25,7 +26,7 @@ export default function Dashboard() {
 
   async function handleLogout() {
     localStorage.removeItem('token');
-    window.location.href = '/login';
+    navigate("/login");
   }
 
   return (
